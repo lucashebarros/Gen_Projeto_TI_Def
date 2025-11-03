@@ -9,9 +9,10 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 0 1rem;
             background-color: #f9f9f9;
         }
+
         header {
             background-color: #57F572;
             color: rgb(0,0,0);
@@ -26,9 +27,10 @@
             left: 1rem;
             height: 50px;
         }
+        
         main {
             padding: 2rem;
-            max-width: 1200px;
+        /*  max-width: 1200px; */
             margin: auto;
         }
         table {
@@ -60,8 +62,11 @@
             box-sizing: border-box; /* Garante que o padding não quebre o layout */
         }
         td textarea {
-            width: 160px;
-            min-height: 80px; /* Altura mínima para o campo de situação */
+            /* width: 160px; */ /* REMOVA OU COMENTE ESTA LINHA */
+            width: 100%;    /* ADICIONE/AJUSTE PARA ESTA LINHA */
+            min-height: 80px;
+            resize: vertical; /* Permite redimensionar verticalmente */
+            box-sizing: border-box; /* Garante que padding não estoure a célula */
         }
         footer {
             text-align: center;
@@ -72,7 +77,7 @@
         }
         
 #table-wrapper {
-    overflow-x: auto; /* Mantém a barra de rolagem de segurança */
+   /* overflow-x: auto; /* Mantém a barra de rolagem de segurança */ 
 }
 
         /* Adicione estas regras ao seu CSS dentro da tag <style> */
@@ -115,6 +120,12 @@
     color: black;
     border-color: #4CAF50;
     font-weight: bold;
+}
+
+#actions-header, 
+#project-list td:last-child { 
+    text-align: center; /* Mantém o alinhamento centralizado (opcional) */
+    /* Remova ou comente as linhas min-width e white-space */
 }
     </style>
 </head><body>
@@ -167,6 +178,7 @@
                     <th>Situação Atual</th>
                     <th>Prazo</th>
                     <th>Prioridade</th>
+                    <th>Ordem de Priorização</th> 
                     <th>Priorizado Por</th>
                     <th id="actions-header" style="display: none;">Ações</th>
                 </tr>
@@ -185,6 +197,11 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 
 
